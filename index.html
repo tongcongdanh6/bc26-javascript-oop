@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Tống Công Danh - BC26 - Javascript OOP</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,29 +24,40 @@
                                 <div class="form-group">
                                     <p>Nhập mã món ăn</p>
                                     <input class="form-control" id="maMonAn" />
+                                    <span id="validate_fId_empty" class="text-danger"></span>
+                                    <p id="validate_fId_allNumbers" class="text-danger m-0"></p>
+                                    <p id="validate_fId_duplicate" class="text-danger m-0"></p>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <p>Nhập tên món ăn</p>
                                     <input class="form-control" id="tenMonAn" />
+                                    <span id="validate_fName_empty" class="text-danger"></span>
+                                    <p id="validate_fName_allLetters" class="text-danger m-0"></p>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <p>Nhập giá tiền</p>
                                     <input class="form-control" id="giaTien" />
+                                    <span id="validate_fPrice_empty" class="text-danger"></span>
+                                    <p id="validate_fPrice_allNumbers" class="text-danger m-0"></p>
+                                    <p id="validate_fPrice_valueRange" class="text-danger m-0"></p>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <p>Link ảnh</p>
                                     <input class="form-control" id="linkAnh" />
+                                    <span id="validate_fThumbnailUrl_empty" class="text-danger"></span>
+                                    <p id="validate_fThumbnailUrl_validURL" class="text-danger m-0"></p>
+                                    <p id="validate_fThumbnailUrl_validImageType" class="text-danger m-0"></p>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group text-right">
-                                    <button class="btn btn-success">Thêm món ăn</button>
+                                    <button id="btnAddFood" class="btn btn-success">Thêm món ăn</button>
                                 </div>
                             </div>
                         </div>
@@ -68,13 +79,6 @@
                             </tr>
                         </thead>
                         <tbody class="tblDanhMucMonAn">
-                            <tr>
-                                <td>1</td>
-                                <td>Gà xối mỡ</td>
-                                <td>30.000</td>
-                                <td><img style="width: 100px;height:100px;" src="https://photo2.tinhte.vn/data/attachment-files/2021/02/5354545_image.jpg" /></td>
-                                <td><button class="btn btn-danger">Xoá</button></td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -183,6 +187,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./models/utils.js"></script>
+    <script src="./models/Validation.js"></script>
+    <script src="./models/Food.js"></script>
+    <script src="./models/FoodMenu.js"></script>
     <script src="./controllers/index.js"></script>
 </body>
 </html>
