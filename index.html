@@ -27,6 +27,7 @@
                                     <span id="validate_fId_empty" class="text-danger"></span>
                                     <p id="validate_fId_allNumbers" class="text-danger m-0"></p>
                                     <p id="validate_fId_duplicate" class="text-danger m-0"></p>
+                                    <p id="validate_fId_length" class="text-danger m-0"></p>
                                 </div>
                             </div>
                             <div class="col-6">
@@ -35,6 +36,7 @@
                                     <input class="form-control" id="tenMonAn" />
                                     <span id="validate_fName_empty" class="text-danger"></span>
                                     <p id="validate_fName_allLetters" class="text-danger m-0"></p>
+                                    <p id="validate_fName_length" class="text-danger m-0"></p>
                                 </div>
                             </div>
                             <div class="col-6">
@@ -53,6 +55,7 @@
                                     <span id="validate_fThumbnailUrl_empty" class="text-danger"></span>
                                     <p id="validate_fThumbnailUrl_validURL" class="text-danger m-0"></p>
                                     <p id="validate_fThumbnailUrl_validImageType" class="text-danger m-0"></p>
+                                    <p id="validate_fThumbnailUrl_length" class="text-danger m-0"></p>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -94,41 +97,7 @@
                             Menu cybersoft
                         </div>
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-3 font-weight-bold">Mã món</div>
-                                <div class="col-3 font-weight-bold">Tên món</div>
-                                <div class="col-3 font-weight-bold">Giá tiền</div>
-                                <div class="col-3 font-weight-bold">
-                                    Thao tác
-                                </div>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col-3">1</div>
-                                <div class="col-3">Nước lẩu haidilao</div>
-                                <div class="col-3">100</div>
-                                <div class="col-3">
-                                    <button class="bg-danger text-white btn">+</button>
-                                    <button class="bg-danger text-white btn">-</button>
-                                </div>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col-3">2</div>
-                                <div class="col-3">Mì cay thành đô</div>
-                                <div class="col-3">200</div>
-                                <div class="col-3">
-                                    <button class="bg-danger text-white btn">+</button>
-                                    <button class="bg-danger text-white btn">-</button>
-                                </div>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col-3">3</div>
-                                <div class="col-3">Mực bạch ngọc</div>
-                                <div class="col-3">300</div>
-                                <div class="col-3">
-                                    <button class="bg-danger text-white btn">+</button>
-                                    <button class="bg-danger text-white btn">-</button>
-                                </div>
-                            </div>
+
                         </div>
                       </div>
                 </div>
@@ -150,26 +119,15 @@
                                     </tr>
                                 </thead>
                                 <tbody id="tblHoaDon">
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Mì cay thành đô</td>
-                                        <td>2</td>
-                                        <td>400</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Mực bạch ngọc</td>
-                                        <td>3</td>
-                                        <td>900</td>
-                                    </tr>
+
                                 </tbody>
                                 <tfoot>
                                     <tr>
                                         <tr>
                                             <td></td>
                                             <td></td>
-                                            <td id="txtThanhTien" class="font-weight-bold">Thành tiền</td>
-                                            <td>1300</td>
+                                            <td class="font-weight-bold">Thành tiền</td>
+                                            <td id="txtThanhTien">1300</td>
                                         </tr>
                                     </tr>
                                 </tfoot>
@@ -191,6 +149,8 @@
     <script src="./models/Validation.js"></script>
     <script src="./models/Food.js"></script>
     <script src="./models/FoodMenu.js"></script>
+    <script src="./models/ItemInInvoice.js"></script>
+    <script src="./models/Invoice.js"></script>
     <script src="./controllers/index.js"></script>
 </body>
 </html>
